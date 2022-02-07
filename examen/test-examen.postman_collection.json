@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "2b61b1d5-4ed7-488e-9c12-15f21e847ee8",
+		"name": "test-examen",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "actuator",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9898/actuator",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9898",
+					"path": [
+						"actuator"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list trace msg",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"from\":\"2022-02-06T11:42:17.247-05:00\",\r\n\"to\":\"2022-02-06T13:42:17.247-05:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9898/trace",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9898",
+					"path": [
+						"trace"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save trace msg",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"sessionId\":\"MARZO-DDF-DDFS-XXX\",\r\n\"payload\":\"{\\\"usuario\\\":\\\"juan peres\\\", \\\"ciudad\\\":\\\"lima\\\"}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9898/trace",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9898",
+					"path": [
+						"trace"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,19 @@
+mongodbDatabase: exampleDb
+mongodbUri: "mongodb://127.0.0.1:27017"
+apiPort: 9898
+
+
+management:
+  endpoint:
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+  metrics:
+    export:
+      prometheus:
+        enabled: true      
+  endpoints:
+    web:
+      exposure:
+        include: '*'
